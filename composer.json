@@ -1,5 +1,13 @@
 {
     "name": "tde4-webservice/dwbe",
-    "description": "Crie um web service com os com os requisitos informadaos no TDE04"
-    
+    "description": "Crie um web service com os com os requisitos informadaos no TDE04",
+    "require": {
+        "slim/slim": "^3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Config\\": "app/config",
+            "Controller\\V1\\": "app/controller/v1"
+        }
+    }
 }

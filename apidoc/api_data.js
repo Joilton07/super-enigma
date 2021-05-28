@@ -1,0 +1,368 @@
+define({ "api": [
+  {
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "optional": false,
+            "field": "varname1",
+            "description": "<p>No type.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "varname2",
+            "description": "<p>With type.</p>"
+          }
+        ]
+      }
+    },
+    "type": "",
+    "url": "",
+    "version": "0.0.0",
+    "filename": "C:/xampp/htdocs/super-enigma/apidoc/main.js",
+    "group": "C:\\xampp\\htdocs\\super-enigma\\apidoc\\main.js",
+    "groupTitle": "C:\\xampp\\htdocs\\super-enigma\\apidoc\\main.js",
+    "name": ""
+  },
+  {
+    "type": "GET",
+    "url": "v1/parImpar/:valor",
+    "title": "Impar ou Par",
+    "version": "1.0.0",
+    "description": "<p>Método verifica se o valor é impar ou par</p>",
+    "group": "Math",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "numero",
+            "description": ""
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "http://localhost/super-enigma/v1/parImpar/7",
+          "type": "url"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "JSON",
+            "optional": false,
+            "field": "Resultado",
+            "description": "<p>Informando se é par ou impar</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"Resultado\": \"Impar\"\n}",
+          "type": "JSON"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "type": "String",
+            "optional": false,
+            "field": "erro",
+            "description": "<p>Não informou um numero</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "Page Not Found\nThe page you are looking for could not be found. Check the address bar to ensure your URL is spelled correctly. If all else fails, you can visit our home page at the link below.\n\nVisit the Home Page",
+          "type": "HTML"
+        }
+      ]
+    },
+    "filename": "C:/xampp/htdocs/super-enigma/app/controller/v1/MainController.php",
+    "groupTitle": "Math",
+    "name": "GetV1ParimparValor",
+    "sampleRequest": [
+      {
+        "url": "http://localhost/super-enigmav1/parImpar/:valor"
+      }
+    ]
+  },
+  {
+    "type": "POST",
+    "url": "v1/maior",
+    "title": "O numero maior!",
+    "version": "1.0.0",
+    "description": "<p>Metodo verifica qual é o numero maior.</p>",
+    "group": "Math",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "Numeros",
+            "description": "<p>Informar um array de numeros.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "HTTP/1.1 200 OK\n[\n    -1,\n    -27,\n    -7\n]",
+          "type": "JSON"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Integer",
+            "optional": false,
+            "field": "Maior",
+            "description": "<p>O valor maior.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"O numero maior é\": -1\n}",
+          "type": "JSON"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "type": "String",
+            "optional": false,
+            "field": "Error",
+            "description": "<p>Os numeros não foi informados.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n{\n    \"erro\": \"Não foi informado os numeros!\"\n}",
+          "type": "type"
+        }
+      ]
+    },
+    "filename": "C:/xampp/htdocs/super-enigma/app/controller/v1/MainController.php",
+    "groupTitle": "Math",
+    "name": "PostV1Maior",
+    "sampleRequest": [
+      {
+        "url": "http://localhost/super-enigmav1/maior"
+      }
+    ]
+  },
+  {
+    "type": "GET",
+    "url": "/v1/",
+    "title": "Status",
+    "version": "1.0.0",
+    "description": "<p>Método retorna uma string</p>",
+    "group": "Status",
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "json",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Informando que esta no sistema</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"status\": \"OK\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "C:/xampp/htdocs/super-enigma/app/controller/v1/MainController.php",
+    "groupTitle": "Status",
+    "name": "GetV1",
+    "sampleRequest": [
+      {
+        "url": "http://localhost/super-enigma/v1/"
+      }
+    ]
+  },
+  {
+    "type": "POST",
+    "url": "v1/ordenar/crescente",
+    "title": "Ordenar Cresente",
+    "version": "1.0.0",
+    "description": "<p>Ordenar os numeros informadas do menor para o maior.</p>",
+    "group": "V1/Ordenar",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "optional": false,
+            "field": "Numeros",
+            "description": "<p>Informa uma array de numeros</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "     HTTP/1.1 200 OK\n     [\n\t        4,\n         2,\n         7\n     ]",
+          "type": "JSON"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Array",
+            "optional": false,
+            "field": "Resultado",
+            "description": "<p>Os numeros ordenados em ordem crescente.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n    \"1\": 2,\n    \"0\": 4,\n    \"2\": 7   \n}",
+          "type": "JSON"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Não informou o array de numeros.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n{\n    \"erro\": \"Não foi informado os numeros!\"\n}",
+          "type": "String"
+        }
+      ]
+    },
+    "filename": "C:/xampp/htdocs/super-enigma/app/controller/v1/MainController.php",
+    "groupTitle": "V1/Ordenar",
+    "name": "PostV1OrdenarCrescente",
+    "sampleRequest": [
+      {
+        "url": "http://localhost/super-enigmav1/ordenar/crescente"
+      }
+    ]
+  },
+  {
+    "type": "POST",
+    "url": "v1/ordenar/decresente",
+    "title": "Ordenar Decresente",
+    "version": "1.0.0",
+    "description": "<p>Ordenar os numeros em ordem decresente</p>",
+    "group": "V1/Ordenar",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "optional": false,
+            "field": "Numeros",
+            "description": "<p>Informa um array de numeros</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "[\n    4,\n    7,\n    6\n]",
+          "type": "JSON"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "JSON",
+            "optional": false,
+            "field": "Numeros",
+            "description": "<p>Os numeros ordenados em ordem decresente</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n  {\n      4,\n      7,\n      6\n  }",
+          "type": "JSON"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "404": [
+          {
+            "group": "404",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Não informou os numeros</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n{\n    \"erro\": \"Não foi informado os numeros!\"\n}",
+          "type": "HTML"
+        }
+      ]
+    },
+    "filename": "C:/xampp/htdocs/super-enigma/app/controller/v1/MainController.php",
+    "groupTitle": "V1/Ordenar",
+    "name": "PostV1OrdenarDecresente",
+    "sampleRequest": [
+      {
+        "url": "http://localhost/super-enigmav1/ordenar/decresente"
+      }
+    ]
+  }
+] });
