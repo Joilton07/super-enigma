@@ -1,0 +1,8 @@
+{
+    "name": "pdsiv/web service",
+    "description": "API back-end - TDE 04 Web Service",
+    "title": "Web Service back-end",
+    "version": "1.0.0",
+    "url": "http://localhost/super-enigma",
+    "sampleUrl" : "http://localhost/super-enigma"
+}
